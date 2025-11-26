@@ -41,6 +41,7 @@ source env/bin/activate
 3. **Instalar dependencias:**
 ```bash
 pip install -r requirements.txt
+```
 
 ## 🛠️ Uso
 Para ejecutar la segmentación en una imagen de prueba, utiliza el script main.py desde la terminal.
@@ -48,6 +49,7 @@ Para ejecutar la segmentación en una imagen de prueba, utiliza el script main.p
 **Ejecución básica**
 ```bash
 python main.py --image data/ejemplo.jpg
+```
 
 **Parámetros opcionales**
 Puedes ajustar la sensibilidad del algoritmo modificando los parámetros de la matriz de afinidad:
@@ -58,6 +60,7 @@ Puedes ajustar la sensibilidad del algoritmo modificando los parámetros de la m
 
 ```bash
 python main.py --image data/paisaje.jpg --r 5 --sigma_i 10 --sigma_x 4
+```
 
 ## 📂 Estructura del Proyecto
 
@@ -72,6 +75,7 @@ MpIA_Codigo_ApellidoNombre/
 ├── main.py             # Punto de entrada (CLI)
 ├── requirements.txt    # Lista de dependencias
 └── README.md           # Documentación
+```
 
 ## 📚 Referencias
 - Paper Original: Shi, J., & Malik, J. (2000). Normalized cuts and image segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence, 22(8), 888-905.
