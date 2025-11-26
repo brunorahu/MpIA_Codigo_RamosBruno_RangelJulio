@@ -1,0 +1,5 @@
+numpy
+scipy
+matplotlib
+opencv-python
+scikit-image  # Solo usaremos funciones utilitarias (img_to_graph), NO algoritmos de segmentación.

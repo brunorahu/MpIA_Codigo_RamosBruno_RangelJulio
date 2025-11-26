@@ -1,0 +1,14 @@
+# Ignorar entorno virtual
+env/
+venv/
+.env
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Ignorar archivos del sistema
+.DS_Store
+
+# Ignorar datos pesados (opcional, si se llegan a usar imágenes muy grandes)
+# data/
