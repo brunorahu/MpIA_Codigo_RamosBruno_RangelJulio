@@ -54,9 +54,9 @@ python main.py --image data/ejemplo.jpg
 **Parámetros opcionales**
 Puedes ajustar la sensibilidad del algoritmo modificando los parámetros de la matriz de afinidad:
 
-```bash--r```: Radio de vecindad (píxeles conectados).
-```bash--sigma_i```: Varianza para la intensidad de color.
-```bash--sigma_x```: Varianza para la distancia espacial.
+- ```--r```: Radio de vecindad (píxeles conectados).
+- ```--sigma_i```: Varianza para la intensidad de color.
+- ```--sigma_x```: Varianza para la distancia espacial.
 
 ```bash
 python main.py --image data/paisaje.jpg --r 5 --sigma_i 10 --sigma_x 4
