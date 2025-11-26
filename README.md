@@ -22,22 +22,24 @@ $$(D - W)y = \lambda D y$$
 ## Instalación
 
 Sigue estos pasos para configurar el entorno:
-
+https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/TU_USUARIO/MpIA_Codigo_TuApellidoTuNombre.git](https://github.com/TU_USUARIO/MpIA_Codigo_TuApellidoTuNombre.git)
-   cd MpIA_Codigo_TuApellidoTuNombre
+   git clone https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio.git
+   cd MpIA_Codigo_RamosBruno_RangelJulio
 
 2. **Crear y activar un entorno virtual (recomendado):**
 
-# Windows
+**Windows**
+```bash
 python -m venv env
 .\env\Scripts\activate
-
-# macOS/Linux
+```
+**macOS/Linux**
+```bash
 python3 -m venv env
 source env/bin/activate
-
+```
 3. **Instalar dependencias:**
 ```bash
 pip install -r requirements.txt
