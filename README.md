@@ -25,7 +25,7 @@ Sigue estos pasos para configurar el entorno:
 https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio.git]([https://github.com/TU_USUARIO/MpIA_Codigo_TuApellidoTuNombre](https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio.git)
+   git clone [https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio.git](https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio.git)
    cd MpIA_Codigo_TuApellidoTuNombre
 
 2. **Crear y activar un entorno virtual (recomendado):**
