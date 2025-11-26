@@ -31,13 +31,15 @@ https://github.com/brunorahu/MpIA_Codigo_RamosBruno_RangelJulio
 2. **Crear y activar un entorno virtual (recomendado):**
 
 **Windows**
+```bash
 python -m venv env
 .\env\Scripts\activate
-
+```
 **macOS/Linux**
+```bash
 python3 -m venv env
 source env/bin/activate
-
+```
 3. **Instalar dependencias:**
 ```bash
 pip install -r requirements.txt
