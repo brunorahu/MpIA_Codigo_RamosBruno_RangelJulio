@@ -8,7 +8,7 @@ def load_and_resize_image(path, target_size=(100, 100)):
     Carga una imagen, la convierte a RGB y la redimensiona para
     que el cálculo de eigenvalores sea viable en tiempo razonable.
     
-    Args:
+    Argumentos:
         path (str): Ruta al archivo de imagen.
         target_size (tuple): (ancho, alto) nuevos. El paper usa aprox 100x120.
     """
@@ -24,7 +24,6 @@ def load_and_resize_image(path, target_size=(100, 100)):
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     
     # Redimensionar (Importante para rendimiento)
-    # NCuts es O(N^1.5) o más lento dependiendo del solver. 
     # Imágenes grandes colapsarán la RAM.
     img_resized = cv2.resize(img_rgb, target_size)
     
@@ -35,7 +34,7 @@ def plot_results(original, eigenvector, mask):
     """
     Genera una figura comparativa para el reporte.
     
-    Args:
+    Argumentos:
         original: Imagen original RGB.
         eigenvector: El Fiedler Vector (valores reales continuos).
         mask: La segmentación binaria final.

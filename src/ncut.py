@@ -11,7 +11,7 @@ class NCutSegmenter:
     
     def __init__(self, radius=5, sigma_I=10.0, sigma_X=4.0):
         """
-        Args:
+        Argumentos:
             radius (int): Radio r para la vecindad de conexión de píxeles.
             sigma_I (float): Parámetro de escala para la similitud de intensidad/color.
             sigma_X (float): Parámetro de escala para la proximidad espacial.
@@ -22,7 +22,7 @@ class NCutSegmenter:
         
     def _get_features(self, img):
         """
-        Normaliza la imagen y aplana los canales para facilitar cálculos vectoriales.
+        Normaliza la imagen y aplana los canales para facilitar cálculos vectoriales (Lista de pixeles).
         """
         # Asegurar float y rango [0, 1]
         img = img.astype(np.float32) / 255.0
@@ -34,7 +34,7 @@ class NCutSegmenter:
             img = img.reshape((h, w, 1))
             
         # Aplanar: Array de (N, canales)
-        # F(i) vector de características [cite: 335]
+        # F(i) vector de características
         flat_img = img.reshape((N, -1))
         return flat_img, h, w, N
 
@@ -46,7 +46,7 @@ class NCutSegmenter:
         """
         features, h, w, N = self._get_features(img)
         
-        # Listas para construir la matriz dispersa formato COO (Coordinate list)
+        # Listas para construir la matriz dispersa
         rows = []
         cols = []
         data = []
@@ -122,7 +122,7 @@ class NCutSegmenter:
         """
         Ejecuta el pipeline completo de segmentación.
         
-        Args:
+        Argumentos:
             img: Imagen de entrada (H, W) o (H, W, C).
             num_cuts: Número de cortes (eigenvectores) a calcular.
             
@@ -135,7 +135,7 @@ class NCutSegmenter:
         N = W.shape[0]
         
         # 2. Construir matriz de Grados D (Diagonal)
-        # d_i = sum_j w_ij [cite: 133]
+        # d_i = sum_j w_ij
         d = np.array(W.sum(axis=1)).flatten()
         D = sparse.diags(d)
         
@@ -144,7 +144,7 @@ class NCutSegmenter:
         # D^(-1/2) (D - W) D^(-1/2) z = lambda z  
         # donde z = D^(1/2) y
         
-        # Calcular D^(-1/2) con cuidado de división por cero
+        # Calcular D^(-1/2) cuidando una posible división por cero
         with np.errstate(divide='ignore'):
             d_inv_sqrt = 1.0 / np.sqrt(d)
         d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0 # Manejar nodos aislados
